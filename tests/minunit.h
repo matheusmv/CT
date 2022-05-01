@@ -13,7 +13,7 @@
         }
 
 #define mu_run_test(test) \
-        fprintf(stderr, "\n-----%s", #test); \
+        fprintf(stderr, "\n----- %s ", #test); \
         message = test(); \
         tests_run++; \
         if (message) { \
@@ -26,9 +26,8 @@
                 fprintf(stderr, "-----\nRUNNING: %s\n", argv[0]); \
                 char *result = name(); \
                 if (result != 0) { \
-                        fprintf(stderr, "FAILED: %s\n", result); \
-                } \
-                else { \
+                        fprintf(stderr, "\n\nFAILED: %s\n", result); \
+                } else { \
                         fprintf(stderr, "\n\nALL TESTS PASSED\n"); \
                 } \
                 fprintf(stderr, "Tests run: %d\n", tests_run); \

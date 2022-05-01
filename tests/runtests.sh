@@ -15,7 +15,7 @@ run_tests() {
                                 echo $test PASS
                         else
                                 echo "ERROR in test $test: here's tests/tests.log"
-                                echo "------"
+                                echo "-----"
                                 tail tests/tests.log
                                 exit 1
                         fi
